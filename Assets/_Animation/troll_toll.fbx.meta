@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 129f760713e45b443a7056dc424cec04
+timeCreated: 1498790824
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: cavetroll_split:Frank_Reference
+    100002: cavetroll_split:Mesh
+    100004: Character2_LeftArm
+    100006: Character2_LeftForeArm
+    100008: Character2_LeftHand
+    100010: Character2_LeftHandIndex1
+    100012: Character2_LeftHandIndex2
+    100014: Character2_LeftHandIndex3
+    100016: Character2_LeftHandIndex4
+    100018: Character2_LeftHandMiddle1
+    100020: Character2_LeftHandMiddle2
+    100022: Character2_LeftHandMiddle3
+    100024: Character2_LeftHandMiddle4
+    100026: Character2_LeftHandThumb1
+    100028: Character2_LeftHandThumb2
+    100030: Character2_LeftHandThumb3
+    100032: Character2_LeftHandThumb4
+    100034: Character2_RightArm
+    100036: Character2_RightForeArm
+    100038: Character2_RightHand
+    100040: Character2_RightHandIndex1
+    100042: Character2_RightHandIndex2
+    100044: Character2_RightHandIndex3
+    100046: Character2_RightHandIndex4
+    100048: Character2_RightHandMiddle1
+    100050: Character2_RightHandMiddle2
+    100052: Character2_RightHandMiddle3
+    100054: Character2_RightHandMiddle4
+    100056: Character2_RightHandThumb1
+    100058: Character2_RightHandThumb2
+    100060: Character2_RightHandThumb3
+    100062: Character2_RightHandThumb4
+    100064: Frank_Head
+    100066: Frank_Head1
+    100068: Frank_Hips
+    100070: Frank_Jaw
+    100072: Frank_LeftFoot
+    100074: Frank_LeftFoot 1
+    100076: Frank_LeftLeg
+    100078: Frank_LeftLeg 1
+    100080: Frank_LeftShoulder
+    100082: Frank_LeftToeBase
+    100084: Frank_LeftToeBase 1
+    100086: Frank_LeftToeBase1
+    100088: Frank_LeftToeBase1 1
+    100090: Frank_LeftToeBase2
+    100092: Frank_LeftToeBase2 1
+    100094: Frank_LeftUpLeg
+    100096: Frank_LeftUpLeg1
+    100098: Frank_LeftWrist
+    100100: Frank_Neck
+    100102: Frank_RightShoulder1
+    100104: Frank_RightWrist
+    100106: Frank_skeleton_grp
+    100108: Frank_Spine
+    100110: Frank_Spine1
+    100112: Frank_Spine2
+    100114: Frank_Spine3
+    100116: joint3
+    100118: joint3 1
+    100120: joint4
+    100122: joint4 1
+    100124: joint5
+    100126: joint5 1
+    100128: //RootNode
+    400000: cavetroll_split:Frank_Reference
+    400002: cavetroll_split:Mesh
+    400004: Character2_LeftArm
+    400006: Character2_LeftForeArm
+    400008: Character2_LeftHand
+    400010: Character2_LeftHandIndex1
+    400012: Character2_LeftHandIndex2
+    400014: Character2_LeftHandIndex3
+    400016: Character2_LeftHandIndex4
+    400018: Character2_LeftHandMiddle1
+    400020: Character2_LeftHandMiddle2
+    400022: Character2_LeftHandMiddle3
+    400024: Character2_LeftHandMiddle4
+    400026: Character2_LeftHandThumb1
+    400028: Character2_LeftHandThumb2
+    400030: Character2_LeftHandThumb3
+    400032: Character2_LeftHandThumb4
+    400034: Character2_RightArm
+    400036: Character2_RightForeArm
+    400038: Character2_RightHand
+    400040: Character2_RightHandIndex1
+    400042: Character2_RightHandIndex2
+    400044: Character2_RightHandIndex3
+    400046: Character2_RightHandIndex4
+    400048: Character2_RightHandMiddle1
+    400050: Character2_RightHandMiddle2
+    400052: Character2_RightHandMiddle3
+    400054: Character2_RightHandMiddle4
+    400056: Character2_RightHandThumb1
+    400058: Character2_RightHandThumb2
+    400060: Character2_RightHandThumb3
+    400062: Character2_RightHandThumb4
+    400064: Frank_Head
+    400066: Frank_Head1
+    400068: Frank_Hips
+    400070: Frank_Jaw
+    400072: Frank_LeftFoot
+    400074: Frank_LeftFoot 1
+    400076: Frank_LeftLeg
+    400078: Frank_LeftLeg 1
+    400080: Frank_LeftShoulder
+    400082: Frank_LeftToeBase
+    400084: Frank_LeftToeBase 1
+    400086: Frank_LeftToeBase1
+    400088: Frank_LeftToeBase1 1
+    400090: Frank_LeftToeBase2
+    400092: Frank_LeftToeBase2 1
+    400094: Frank_LeftUpLeg
+    400096: Frank_LeftUpLeg1
+    400098: Frank_LeftWrist
+    400100: Frank_Neck
+    400102: Frank_RightShoulder1
+    400104: Frank_RightWrist
+    400106: Frank_skeleton_grp
+    400108: Frank_Spine
+    400110: Frank_Spine1
+    400112: Frank_Spine2
+    400114: Frank_Spine3
+    400116: joint3
+    400118: joint3 1
+    400120: joint4
+    400122: joint4 1
+    400124: joint5
+    400126: joint5 1
+    400128: //RootNode
+    4300000: cavetroll_split:Mesh
+    9500000: //RootNode
+    13700000: cavetroll_split:Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
