@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: e74b7d72e927cda4995029f79349df42
+timeCreated: 1507503121
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: hands:b_l_grip
+    100002: hands:b_l_grip_end
+    100004: hands:b_l_hand
+    100006: hands:b_l_hand_ignore
+    100008: hands:b_l_hand_ignore_end
+    100010: hands:b_l_index1
+    100012: hands:b_l_index2
+    100014: hands:b_l_index3
+    100016: hands:b_l_index_ignore
+    100018: hands:b_l_index_ignore_end
+    100020: hands:b_l_middle1
+    100022: hands:b_l_middle2
+    100024: hands:b_l_middle3
+    100026: hands:b_l_middle_ignore
+    100028: hands:b_l_middle_ignore_end
+    100030: hands:b_l_pinky0
+    100032: hands:b_l_pinky1
+    100034: hands:b_l_pinky2
+    100036: hands:b_l_pinky3
+    100038: hands:b_l_pinky_ignore
+    100040: hands:b_l_pinky_ignore_end
+    100042: hands:b_l_ring1
+    100044: hands:b_l_ring2
+    100046: hands:b_l_ring3
+    100048: hands:b_l_ring_ignore
+    100050: hands:b_l_ring_ignore_end
+    100052: hands:b_l_thumb1
+    100054: hands:b_l_thumb2
+    100056: hands:b_l_thumb3
+    100058: hands:b_l_thumb_ignore
+    100060: hands:b_l_thumb_ignore_end
+    100062: hands:l_hand_world
+    100064: //RootNode
+    400000: hands:b_l_grip
+    400002: hands:b_l_grip_end
+    400004: hands:b_l_hand
+    400006: hands:b_l_hand_ignore
+    400008: hands:b_l_hand_ignore_end
+    400010: hands:b_l_index1
+    400012: hands:b_l_index2
+    400014: hands:b_l_index3
+    400016: hands:b_l_index_ignore
+    400018: hands:b_l_index_ignore_end
+    400020: hands:b_l_middle1
+    400022: hands:b_l_middle2
+    400024: hands:b_l_middle3
+    400026: hands:b_l_middle_ignore
+    400028: hands:b_l_middle_ignore_end
+    400030: hands:b_l_pinky0
+    400032: hands:b_l_pinky1
+    400034: hands:b_l_pinky2
+    400036: hands:b_l_pinky3
+    400038: hands:b_l_pinky_ignore
+    400040: hands:b_l_pinky_ignore_end
+    400042: hands:b_l_ring1
+    400044: hands:b_l_ring2
+    400046: hands:b_l_ring3
+    400048: hands:b_l_ring_ignore
+    400050: hands:b_l_ring_ignore_end
+    400052: hands:b_l_thumb1
+    400054: hands:b_l_thumb2
+    400056: hands:b_l_thumb3
+    400058: hands:b_l_thumb_ignore
+    400060: hands:b_l_thumb_ignore_end
+    400062: hands:l_hand_world
+    400064: //RootNode
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
