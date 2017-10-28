@@ -8,12 +8,11 @@ public class Dialogue : MonoBehaviour {
 		* Implement threshold for flipping offset rotation to prevent rapid flipping when looking directly at dialogue.
 	*/
 
-
 	[SerializeField]
 	private Page[] pages;
 	private Page current;
-
-	public GameObject attachedTo;
+	[SerializeField]
+	private GameObject attachedTo;
 	private GameObject player;
 
 	private Text text;
