@@ -28,16 +28,56 @@ using System.IO;
 [InitializeOnLoad]
 class OVRMoonlightLoader
 {
+	private const string prefName = "OVRMoonlightLoader_Enabled";
+	private const string menuItemName = "Tools/Oculus/Use Required Project Settings";
+	static bool setPrefsForUtilities;
+
+	[MenuItem(menuItemName)]
+	static void ToggleUtilities()
+	{
+		setPrefsForUtilities = !setPrefsForUtilities;
+		Menu.SetChecked(menuItemName, setPrefsForUtilities);
+
+		int newValue = (setPrefsForUtilities) ? 1 : 0;
+		PlayerPrefs.SetInt(prefName, newValue);
+		PlayerPrefs.Save();
+
+		Debug.Log("Using required project settings: " + setPrefsForUtilities);
+	}
+
     static OVRMoonlightLoader()
 	{
+		EditorApplication.delayCall += OnDelayCall;
+		EditorApplication.update += OnUpdate;
+	}
+
+	static void OnDelayCall()
+	{
+		setPrefsForUtilities = PlayerPrefs.GetInt(prefName, 1) != 0;
+		Menu.SetChecked(menuItemName, setPrefsForUtilities);
+
+		if (!setPrefsForUtilities)
+			return;
+		
+		EnforceAndroidSettings();
 		EnforceInputManagerBindings();
 #if UNITY_ANDROID
-		EditorApplication.delayCall += EnforceOSIG;
+		EnforceOSIG();
 #endif
-		EditorApplication.update += EnforceBundleId;
-		EditorApplication.update += EnforceVRSupport;
-		EditorApplication.update += EnforceInstallLocation;
+	}
 
+	static void OnUpdate()
+	{
+		if (!setPrefsForUtilities)
+			return;
+		
+		EnforceBundleId();
+		EnforceVRSupport();
+		EnforceInstallLocation();
+	}
+
+	static void EnforceAndroidSettings()
+	{
 		if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.Android)
 			return;
 
@@ -85,6 +125,15 @@ class OVRMoonlightLoader
 			{
 				Debug.Log ("Enabling Unity VR support");
 				PlayerSettings.virtualRealitySupported = true;
+
+#if UNITY_5_6_OR_NEWER
+				bool oculusFound = false;
+				foreach (var device in UnityEngine.XR.XRSettings.supportedDevices)
+					oculusFound |= (device == "Oculus");
+
+				if (!oculusFound)
+					Debug.LogError("Please add Oculus to the list of supported devices to use the Utilities.");
+#endif
 				return;
 			}
 		}
@@ -114,7 +163,8 @@ class OVRMoonlightLoader
 
 	private static void EnforceInstallLocation()
 	{
-		PlayerSettings.Android.preferredInstallLocation = AndroidPreferredInstallLocation.Auto;
+		if (PlayerSettings.Android.preferredInstallLocation != AndroidPreferredInstallLocation.Auto)
+			PlayerSettings.Android.preferredInstallLocation = AndroidPreferredInstallLocation.Auto;
 	}
 
 	private static void EnforceInputManagerBindings()

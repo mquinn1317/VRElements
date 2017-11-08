@@ -35,7 +35,7 @@ public class Dialogue : MonoBehaviour {
 		pageLayoutTransform = transform.Find("TextLayout");
 		pageText = transform.Find("TextLayout/Page Text").GetComponent<Text>();
 		player = GameObject.Find("OVRPlayerController");
-		camera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor");
+		camera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").gameObject;
 	}
 
 	// Use this for initialization
@@ -58,7 +58,7 @@ public class Dialogue : MonoBehaviour {
 		graphicRaycaster.Raycast(data, results);
 		if (results.Count > 0) {
 			if (selectedText) selectedText.color = Color.black;
-			selectedText = results[0];
+			selectedText = results[0].gameObject.GetComponent<Text>();
 			selectedText.color = Color.red;
 		}
 

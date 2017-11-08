@@ -32,7 +32,7 @@ public class OVRGrabber : MonoBehaviour
     public float grabBegin = 0.55f;
     public float grabEnd = 0.35f;
 	public bool left;
-	public inventorycollider ic;
+	public inventorycollider inventoryCollider;
 
     // Demonstrates parenting the held object to the hand's transform when grabbed.
     // When false, the grabbed object is moved every FixedUpdate using MovePosition. 
@@ -44,7 +44,6 @@ public class OVRGrabber : MonoBehaviour
 
     // Child/attached transforms of the grabber, indicating where to snap held objects to (if you snap them).
     // Also used for ranking grab targets in case of multiple candidates.
-    [SerializeField]
     public Transform m_gripTransform = null;
     // Child/attached Colliders to detect candidate grabbable objects.
     [SerializeField]
@@ -63,12 +62,12 @@ public class OVRGrabber : MonoBehaviour
     protected Quaternion m_anchorOffsetRotation;
     protected Vector3 m_anchorOffsetPosition;
     protected float m_prevFlex;
-	public OVRGrabbable m_grabbedObj = null;
-    Vector3 m_grabbedObjectPosOff;
-    Quaternion m_grabbedObjectRotOff;
+	protected OVRGrabbable m_grabbedObj = null;
+    protected Vector3 m_grabbedObjectPosOff;
+    protected Quaternion m_grabbedObjectRotOff;
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool operatingWithoutOVRCameraRig = true;
-	private MagicManager em;
+	private MagicManager magicManager;
 
     /// <summary>
     /// The currently grabbed object.
@@ -90,7 +89,7 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-    void Awake()
+    protected virtual void Awake()
     {
         m_anchorOffsetPosition = transform.localPosition;
         m_anchorOffsetRotation = transform.localRotation;
@@ -106,12 +105,14 @@ public class OVRGrabber : MonoBehaviour
 			rig.UpdatedAnchors += (r) => {OnUpdatedAnchors();};
 			operatingWithoutOVRCameraRig = false;
 		}
+
+		magicManager = GameObject.FindGameObjectWithTag ("magicmanager").GetComponent<MagicManager> ();
+		inventoryCollider = GameObject.FindGameObjectWithTag ("inventorycollider").GetComponent<inventorycollider> ();
+
     }
 
-    void Start()
+    protected virtual void Start()
     {
-		em = GameObject.FindGameObjectWithTag ("magicmanager").GetComponent<MagicManager> ();
-		ic = GameObject.FindGameObjectWithTag ("inventorycollider").GetComponent<inventorycollider> ();
         m_lastPos = transform.position;
         m_lastRot = transform.rotation;
         if(m_parentTransform == null)
@@ -206,21 +207,32 @@ public class OVRGrabber : MonoBehaviour
 
     protected void CheckForGrabOrRelease(float prevFlex)
     {
+		/*
+		 * Default functionality
+        if ((m_prevFlex >= grabBegin) && (prevFlex < grabBegin))
+        {
+            GrabBegin();
+        }
+        else if ((m_prevFlex <= grabEnd) && (prevFlex > grabEnd))
+        {
+            GrabEnd();
+        }
+        */
+
 		if (m_grabbedObj != null && !m_grabbedObj.gameObject.activeSelf) {
 			GrabEnd ();
 		}
 		if ((m_prevFlex >= grabBegin) && (prevFlex < grabBegin)) {
 			if (m_grabbedObj == null) {
 				GrabBegin ();
-			} else if (m_grabbedObj != null && ((left && ic.leftreleasable) || (!left && ic.rightreleasable)) && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, m_controller) > .45f) {
-				print ("alright this is happening....");
-				ic.releaseItem (m_grabbedObj.gameObject);
+			} else if (((left && inventoryCollider.leftreleasable) || (!left && inventoryCollider.rightreleasable)) && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, m_controller) > .45f) {
+				inventoryCollider.releaseItem (m_grabbedObj.gameObject);
 				GrabEnd ();
 			}
 		}
     }
 
-    protected void GrabBegin()
+    protected virtual void GrabBegin()
     {
         float closestMagSq = float.MaxValue;
 		OVRGrabbable closestGrabbable = null;
@@ -229,7 +241,7 @@ public class OVRGrabber : MonoBehaviour
         // Iterate grab candidates and find the closest grabbable candidate
 		foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
         {
-			bool canGrab = (!(grabbable.isGrabbed && !grabbable.allowOffhandGrab) && !em.selecting);
+			bool canGrab = (!(grabbable.isGrabbed && !grabbable.allowOffhandGrab) && !magicManager.selecting);
             if (!canGrab)
             {
                 continue;
@@ -241,7 +253,6 @@ public class OVRGrabber : MonoBehaviour
                 // Store the closest grabbable
 				if (grabbableCollider == null) {
 					continue;
-					Destroy (grabbableCollider.gameObject.transform.parent.gameObject);
 				}
                 Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
                 float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
@@ -313,9 +324,9 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-    protected void MoveGrabbedObject(Vector3 pos, Quaternion rot, bool forceTeleport = false)
+    protected virtual void MoveGrabbedObject(Vector3 pos, Quaternion rot, bool forceTeleport = false)
     {
-		if (m_grabbedObj == null || m_grabbedObj.grabbedRigidbody == null)
+        if (m_grabbedObj == null || m_grabbedObj.grabbedRigidbody == null)
         {
             return;
         }
@@ -360,10 +371,9 @@ public class OVRGrabber : MonoBehaviour
         m_grabbedObj.GrabEnd(linearVelocity, angularVelocity);
         if(m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
-		print ("no longer holding");
     }
 
-    protected void GrabVolumeEnable(bool enabled)
+    protected virtual void GrabVolumeEnable(bool enabled)
     {
         if (m_grabVolumeEnabled == enabled)
         {
@@ -383,7 +393,7 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-	protected void OffhandGrabbed(OVRGrabbable grabbable)
+	protected virtual void OffhandGrabbed(OVRGrabbable grabbable)
     {
         if (m_grabbedObj == grabbable)
         {
