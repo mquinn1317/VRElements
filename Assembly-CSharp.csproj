@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{08F06289-8721-2F0D-8621-38E64538D61C}</ProjectGuid>
+    <ProjectGuid>{2243D883-FCF7-D38C-C136-A2C02B912C12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -19,10 +22,11 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -39,13 +44,76 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Animation\frank\FrankAnimator.cs" />
+     <Compile Include="Assets\_Animation\frank\FrankBehavior.cs" />
+     <Compile Include="Assets\_Animation\frank\LimbColliders.cs" />
+     <Compile Include="Assets\_Animation\frank\sparkscheck.cs" />
+     <Compile Include="Assets\_Animation\hobgoblin\hobgoblin\HobgoblinBehavior.cs" />
+     <Compile Include="Assets\_Animation\hobgoblin\HobGoblinLimbColliders.cs" />
+     <Compile Include="Assets\_Scripts\CastFireball.cs" />
+     <Compile Include="Assets\_Scripts\Dialogue\Dialogue.cs" />
+     <Compile Include="Assets\_Scripts\Dialogue\Page.cs" />
+     <Compile Include="Assets\_Scripts\DontDestroy.cs" />
+     <Compile Include="Assets\_Scripts\enemies\EnemyController.cs" />
+     <Compile Include="Assets\_Scripts\enemies\SkullController.cs" />
+     <Compile Include="Assets\_Scripts\enemies\spawner.cs" />
+     <Compile Include="Assets\_Scripts\environment\BoulderBehavior.cs" />
+     <Compile Include="Assets\_Scripts\environment\FloatingPlatform.cs" />
+     <Compile Include="Assets\_Scripts\environment\Lightbeam.cs" />
+     <Compile Include="Assets\_Scripts\environment\LightBeamRotator.cs" />
+     <Compile Include="Assets\_Scripts\environment\objectrespawner.cs" />
+     <Compile Include="Assets\_Scripts\environment\powercell.cs" />
+     <Compile Include="Assets\_Scripts\environment\respawner.cs" />
+     <Compile Include="Assets\_Scripts\environment\Rotator.cs" />
+     <Compile Include="Assets\_Scripts\environment\Rotator2.cs" />
+     <Compile Include="Assets\_Scripts\environment\skyboxrotator.cs" />
+     <Compile Include="Assets\_Scripts\environment\turnoff.cs" />
+     <Compile Include="Assets\_Scripts\Explosion.cs" />
+     <Compile Include="Assets\_Scripts\Fireball.cs" />
+     <Compile Include="Assets\_Scripts\items\ArrowBehavior.cs" />
+     <Compile Include="Assets\_Scripts\items\BowBehavior.cs" />
+     <Compile Include="Assets\_Scripts\items\bowdrawaudio.cs" />
+     <Compile Include="Assets\_Scripts\items\bowgrabcollider.cs" />
+     <Compile Include="Assets\_Scripts\items\ChestBehavior.cs" />
+     <Compile Include="Assets\_Scripts\items\DroppedItem.cs" />
+     <Compile Include="Assets\_Scripts\items\glider_manager.cs" />
+     <Compile Include="Assets\_Scripts\items\inventorycollider.cs" />
+     <Compile Include="Assets\_Scripts\items\powercellglow.cs" />
+     <Compile Include="Assets\_Scripts\items\swordcontroller.cs" />
+     <Compile Include="Assets\_Scripts\items\swordgrabcollider.cs" />
+     <Compile Include="Assets\_Scripts\LeftHandBehavior.cs" />
+     <Compile Include="Assets\_Scripts\magic\boltbehavior.cs" />
+     <Compile Include="Assets\_Scripts\magic\EarthbendingManager.cs" />
+     <Compile Include="Assets\_Scripts\magic\hedronbehavior.cs" />
+     <Compile Include="Assets\_Scripts\magic\hedronbehavior2.cs" />
+     <Compile Include="Assets\_Scripts\magic\MagicManager.cs" />
+     <Compile Include="Assets\_Scripts\magic\manipulatable.cs" />
+     <Compile Include="Assets\_Scripts\magic\SkillCallbacks.cs" />
+     <Compile Include="Assets\_Scripts\magic\spikebehavior.cs" />
+     <Compile Include="Assets\_Scripts\menus\Actuator.cs" />
+     <Compile Include="Assets\_Scripts\menus\EquipmentManager.cs" />
+     <Compile Include="Assets\_Scripts\menus\InventoryManager.cs" />
+     <Compile Include="Assets\_Scripts\menus\iteminfo.cs" />
+     <Compile Include="Assets\_Scripts\menus\itemlib.cs" />
+     <Compile Include="Assets\_Scripts\menus\itemmenuitem.cs" />
+     <Compile Include="Assets\_Scripts\menus\itemstatscreen.cs" />
+     <Compile Include="Assets\_Scripts\menus\MenuController.cs" />
+     <Compile Include="Assets\_Scripts\PlayerCapsuleCamFollow.cs" />
+     <Compile Include="Assets\_Scripts\PlayerManager.cs" />
+     <Compile Include="Assets\_Scripts\UI\damagecontroller.cs" />
+     <Compile Include="Assets\_Scripts\UI\LookAtTarget.cs" />
+     <Compile Include="Assets\_Scripts\UI\selectorbehavior.cs" />
+     <Compile Include="Assets\_Scripts\UI\targetcone.cs" />
+     <Compile Include="Assets\_Scripts\VRAUT\PhoneController.cs" />
+     <Compile Include="Assets\_Scripts\VRAUT\UIPush.cs" />
+     <Compile Include="Assets\check.cs" />
      <Compile Include="Assets\Dissolve\Examples\scripts\GizmoLine.cs" />
      <Compile Include="Assets\Dissolve\Standard Assets\Effects\AmbientOcclusion\AmbientOcclusion.cs" />
      <Compile Include="Assets\Dissolve\Standard Assets\Effects\AmbientOcclusion\Helpers\PropertyObserver.cs" />
@@ -62,6 +130,18 @@
      <Compile Include="Assets\Dissolve\Standard Assets\Effects\LensAberrations\LensAberrations.cs" />
      <Compile Include="Assets\Dissolve\Standard Assets\Effects\ScreenSpaceReflection\ScreenSpaceReflection.cs" />
      <Compile Include="Assets\Dissolve\Standard Assets\Effects\TonemappingColorGrading\TonemappingColorGrading.cs" />
+     <Compile Include="Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
+     <Compile Include="Assets\OutlineEffect\Demo\Rotate.cs" />
+     <Compile Include="Assets\OutlineEffect\Demo\Toggle.cs" />
+     <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
+     <Compile Include="Assets\OutlineEffect\Outline.cs" />
+     <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
+     <Compile Include="Assets\OVR\Scripts\Composition\OVRCameraComposition.cs" />
+     <Compile Include="Assets\OVR\Scripts\Composition\OVRComposition.cs" />
+     <Compile Include="Assets\OVR\Scripts\Composition\OVRCompositionUtil.cs" />
+     <Compile Include="Assets\OVR\Scripts\Composition\OVRDirectComposition.cs" />
+     <Compile Include="Assets\OVR\Scripts\Composition\OVRExternalComposition.cs" />
+     <Compile Include="Assets\OVR\Scripts\Composition\OVRSandwichComposition.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRBoundary.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
@@ -70,8 +150,10 @@
      <Compile Include="Assets\OVR\Scripts\OVRHaptics.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRHapticsClip.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRInput.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRLayerAttribute.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRLint.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRManager.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRMixedReality.cs" />
      <Compile Include="Assets\OVR\Scripts\OVROnCompleteListener.cs" />
      <Compile Include="Assets\OVR\Scripts\OVROverlay.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRPlatformMenu.cs" />
@@ -87,21 +169,15 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRGrabbable.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRGrabber.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRGridCube.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRMixedRealityCaptureSettings.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRModeParms.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRMonoscopic.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRPlayerController.cs" />
-     <Compile Include="Assets\OVR\Scripts\Util\OVRRTOverlayConnector.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRResetOrientation.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRRTOverlayConnector.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRWaitCursor.cs" />
-     <Compile Include="Assets\OVR\Scripts\Util\StartAtZero.cs" />
-     <Compile Include="Assets\OutlineEffect\Demo\OutlineAnimation.cs" />
-     <Compile Include="Assets\OutlineEffect\Demo\Rotate.cs" />
-     <Compile Include="Assets\OutlineEffect\Demo\Toggle.cs" />
-     <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
-     <Compile Include="Assets\OutlineEffect\Outline.cs" />
-     <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -148,23 +224,22 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\ScreenshotMovie.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\EffectButtonLoop.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\HUDFPS.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\KeyboardCameraControl.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\MouseCameraControl.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\PinchMove2.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\PinchMove3.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\PinchVerticalTranslation.cs" />
-     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\TouchRotate.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\assetUrl.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\autoTarget.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\changeScene.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\EffectButtonLoop.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\HUDFPS.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\KeyboardCameraControl.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\limitFramerate.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\locateAttacker.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\lookAtTarget.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\magicEffectButton.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\MouseCameraControl.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\moveButton.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\moveLimit.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\PinchMove2.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\PinchMove3.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\PinchVerticalTranslation.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\quitButton.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\resetPosition.cs" />
@@ -175,6 +250,7 @@
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\toggleControl.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\toggleControlSingle.cs" />
      <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\toggleParticleSystem.cs" />
+     <Compile Include="Assets\Shuriken Salvo by Moonflower Carnivore\Scripts\TouchRotate.cs" />
      <Compile Include="Assets\UnityVRSamples\Scripts\Reticle.cs" />
      <Compile Include="Assets\UnityVRSamples\Scripts\VREyeRaycaster.cs" />
      <Compile Include="Assets\UnityVRSamples\Scripts\VRInput.cs" />
@@ -182,67 +258,6 @@
      <Compile Include="Assets\UnityVRSamples\Scripts\VRTrackingReset.cs" />
      <Compile Include="Assets\VRGUI\Scripts\VRGUI.cs" />
      <Compile Include="Assets\VRMouseLook.cs" />
-     <Compile Include="Assets\_Animation\frank\FrankAnimator.cs" />
-     <Compile Include="Assets\_Animation\frank\FrankBehavior.cs" />
-     <Compile Include="Assets\_Animation\frank\LimbColliders.cs" />
-     <Compile Include="Assets\_Animation\frank\sparkscheck.cs" />
-     <Compile Include="Assets\_Animation\hobgoblin\HobGoblinLimbColliders.cs" />
-     <Compile Include="Assets\_Animation\hobgoblin\hobgoblin\HobgoblinBehavior.cs" />
-     <Compile Include="Assets\_Scripts\CastFireball.cs" />
-     <Compile Include="Assets\_Scripts\DontDestroy.cs" />
-     <Compile Include="Assets\_Scripts\Explosion.cs" />
-     <Compile Include="Assets\_Scripts\Fireball.cs" />
-     <Compile Include="Assets\_Scripts\LeftHandBehavior.cs" />
-     <Compile Include="Assets\_Scripts\PlayerCapsuleCamFollow.cs" />
-     <Compile Include="Assets\_Scripts\PlayerManager.cs" />
-     <Compile Include="Assets\_Scripts\UI\LookAtTarget.cs" />
-     <Compile Include="Assets\_Scripts\UI\damagecontroller.cs" />
-     <Compile Include="Assets\_Scripts\UI\selectorbehavior.cs" />
-     <Compile Include="Assets\_Scripts\UI\targetcone.cs" />
-     <Compile Include="Assets\_Scripts\VRAUT\PhoneController.cs" />
-     <Compile Include="Assets\_Scripts\VRAUT\UIPush.cs" />
-     <Compile Include="Assets\_Scripts\enemies\EnemyController.cs" />
-     <Compile Include="Assets\_Scripts\enemies\SkullController.cs" />
-     <Compile Include="Assets\_Scripts\enemies\spawner.cs" />
-     <Compile Include="Assets\_Scripts\environment\BoulderBehavior.cs" />
-     <Compile Include="Assets\_Scripts\environment\FloatingPlatform.cs" />
-     <Compile Include="Assets\_Scripts\environment\LightBeamRotator.cs" />
-     <Compile Include="Assets\_Scripts\environment\Lightbeam.cs" />
-     <Compile Include="Assets\_Scripts\environment\Rotator.cs" />
-     <Compile Include="Assets\_Scripts\environment\Rotator2.cs" />
-     <Compile Include="Assets\_Scripts\environment\objectrespawner.cs" />
-     <Compile Include="Assets\_Scripts\environment\powercell.cs" />
-     <Compile Include="Assets\_Scripts\environment\respawner.cs" />
-     <Compile Include="Assets\_Scripts\environment\skyboxrotator.cs" />
-     <Compile Include="Assets\_Scripts\environment\turnoff.cs" />
-     <Compile Include="Assets\_Scripts\items\ArrowBehavior.cs" />
-     <Compile Include="Assets\_Scripts\items\BowBehavior.cs" />
-     <Compile Include="Assets\_Scripts\items\ChestBehavior.cs" />
-     <Compile Include="Assets\_Scripts\items\DroppedItem.cs" />
-     <Compile Include="Assets\_Scripts\items\bowdrawaudio.cs" />
-     <Compile Include="Assets\_Scripts\items\bowgrabcollider.cs" />
-     <Compile Include="Assets\_Scripts\items\glider_manager.cs" />
-     <Compile Include="Assets\_Scripts\items\inventorycollider.cs" />
-     <Compile Include="Assets\_Scripts\items\powercellglow.cs" />
-     <Compile Include="Assets\_Scripts\items\swordcontroller.cs" />
-     <Compile Include="Assets\_Scripts\items\swordgrabcollider.cs" />
-     <Compile Include="Assets\_Scripts\magic\EarthbendingManager.cs" />
-     <Compile Include="Assets\_Scripts\magic\MagicManager.cs" />
-     <Compile Include="Assets\_Scripts\magic\SkillCallbacks.cs" />
-     <Compile Include="Assets\_Scripts\magic\boltbehavior.cs" />
-     <Compile Include="Assets\_Scripts\magic\hedronbehavior.cs" />
-     <Compile Include="Assets\_Scripts\magic\hedronbehavior2.cs" />
-     <Compile Include="Assets\_Scripts\magic\manipulatable.cs" />
-     <Compile Include="Assets\_Scripts\magic\spikebehavior.cs" />
-     <Compile Include="Assets\_Scripts\menus\Actuator.cs" />
-     <Compile Include="Assets\_Scripts\menus\EquipmentManager.cs" />
-     <Compile Include="Assets\_Scripts\menus\InventoryManager.cs" />
-     <Compile Include="Assets\_Scripts\menus\MenuController.cs" />
-     <Compile Include="Assets\_Scripts\menus\iteminfo.cs" />
-     <Compile Include="Assets\_Scripts\menus\itemlib.cs" />
-     <Compile Include="Assets\_Scripts\menus\itemmenuitem.cs" />
-     <Compile Include="Assets\_Scripts\menus\itemstatscreen.cs" />
-     <Compile Include="Assets\check.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Shuriken Salvo by Moonflower Carnivore\Shaders\Particle Alpha Blended Amb Dir Lit.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -250,17 +265,18 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
-     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Shuriken Salvo by Moonflower Carnivore\ShurikenSalvodocumentationv1.03.txt" />
      <None Include="Assets\_Materials\shaders\dissolve.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\Dissolve\Standard Assets\Effects\AntiAliasing\FXAA\Resources\FXAA3.cginc" />
+     <None Include="Assets\OVR\Resources\OVRMRUnlitTransparent.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\OVR\Resources\OVRMRChromaKey.cginc" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
@@ -306,6 +322,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+     <None Include="Assets\OVR\Resources\Cubemap Blit.shader" />
      <None Include="Assets\_Materials\shaders\Basic-Alpha.shader" />
      <None Include="Assets\Dissolve\Standard Assets\Effects\AmbientOcclusion\Resources\AmbientOcclusion.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
@@ -313,6 +330,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+     <None Include="Assets\OVR\Resources\OVRMRUnlit.shader" />
      <None Include="Assets\_Materials\shaders\Burn.shader" />
      <None Include="Assets\Dissolve\Standard Assets\Effects\TonemappingColorGrading\Resources\HistogramRender.shader" />
      <None Include="Assets\Dissolve\Standard Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.cginc" />
@@ -333,6 +351,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
+     <None Include="Assets\OVR\Resources\OVRMRCameraFrameLit.shader" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
@@ -346,6 +365,7 @@
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
      <None Include="Assets\OVR\Resources\Underlay Transparent Occluder.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
+     <None Include="Assets\OVR\Resources\Texture2D Blit.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
@@ -379,10 +399,12 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\_Materials\shaders\BasicOutline-Alpha.shader" />
+     <None Include="Assets\OVR\Resources\OVRMRCameraFrame.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\_Materials\shaders\ToonShaderTransparency.shader" />
+     <None Include="Assets\OVR\Resources\OVRMRClipPlane.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
      <None Include="Assets\Dissolve\Standard Assets\Effects\Bloom\Resources\Bloom.cginc" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
@@ -419,30 +441,45 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
      <None Include="Assets\OVR\Plugins\placeholder.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.VR">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Vuforia.UnityExtensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Users/rachelthomas/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Users/rachelthomas/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6709560A-A45F-DF21-920F-22F6F20B1388}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{25BA8AF6-D820-1BD7-89B4-3C709084AA39}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
