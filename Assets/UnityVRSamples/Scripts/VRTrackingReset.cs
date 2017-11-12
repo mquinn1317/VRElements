@@ -14,12 +14,12 @@ namespace VRStandardAssets.Utils
 
         void SceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            InputTracking.Recenter();
+            UnityEngine.XR.InputTracking.Recenter();
         }
         
         private void OnApplicationPause(bool pauseStatus)
         {
-            InputTracking.Recenter();
+            UnityEngine.XR.InputTracking.Recenter();
         }
     }
 }
