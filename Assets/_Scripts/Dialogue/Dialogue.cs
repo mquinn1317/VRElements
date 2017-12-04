@@ -5,11 +5,6 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 public class Dialogue : MonoBehaviour {
-	/*
-		To Do
-
-		* Implement threshold for flipping offset rotation to prevent rapid flipping when looking directly at dialogue.
-	*/
 
 	[SerializeField]
 	private Page[] pages;

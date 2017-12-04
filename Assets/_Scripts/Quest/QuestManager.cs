@@ -21,6 +21,7 @@ public class QuestManager : MonoBehaviour {
 	public void LoadQuest(string name) {
 		//Could make Quest serializable and inherit from System.Object. Create QuestComponent class that holds a quest.
 		//Load the class and get its Quest (as a copy if needed for prefab to be GCed).
+		Debug.Log("Loading quest: " + name);
 		Quest quest = (Resources.Load("Quests/" + name) as GameObject).GetComponent<Quest>();
 		activeQuests.Add(name, quest);
 	}
