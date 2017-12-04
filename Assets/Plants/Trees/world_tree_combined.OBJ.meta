@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 44585fa573b877b42a79fb8261ef4592
+timeCreated: 1510548820
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Group10141
+    100002: Group12814
+    100004: Group12816
+    100006: Group12818
+    100008: Group13828
+    100010: Group13837
+    100012: Group13852
+    100014: Group14475
+    100016: Group2037
+    100018: Group2039
+    100020: Group2041
+    100022: Group20952
+    100024: Group25268
+    100026: Group26685
+    100028: Group3051
+    100030: Group3060
+    100032: Group3075
+    100034: Group31759
+    100036: Group33802
+    100038: Group33804
+    100040: Group33806
+    100042: Group34172
+    100044: Group34816
+    100046: Group34827
+    100048: Group34842
+    100050: Group37502
+    100052: Group40194
+    100054: Group40196
+    100056: Group40198
+    100058: Group40561
+    100060: Group41208
+    100062: Group41219
+    100064: Group41234
+    100066: Group41845
+    100068: Group48315
+    100070: Group50764
+    100072: Group52640
+    100074: Group54043
+    100076: Group57810
+    100078: Group59124
+    100080: Group61178
+    100082: Group61180
+    100084: Group61182
+    100086: Group62192
+    100088: Group62203
+    100090: Group62218
+    100092: Group63431
+    100094: Group64862
+    100096: Group7077
+    100098: Group9359
+    100100: //RootNode
+    400000: Group10141
+    400002: Group12814
+    400004: Group12816
+    400006: Group12818
+    400008: Group13828
+    400010: Group13837
+    400012: Group13852
+    400014: Group14475
+    400016: Group2037
+    400018: Group2039
+    400020: Group2041
+    400022: Group20952
+    400024: Group25268
+    400026: Group26685
+    400028: Group3051
+    400030: Group3060
+    400032: Group3075
+    400034: Group31759
+    400036: Group33802
+    400038: Group33804
+    400040: Group33806
+    400042: Group34172
+    400044: Group34816
+    400046: Group34827
+    400048: Group34842
+    400050: Group37502
+    400052: Group40194
+    400054: Group40196
+    400056: Group40198
+    400058: Group40561
+    400060: Group41208
+    400062: Group41219
+    400064: Group41234
+    400066: Group41845
+    400068: Group48315
+    400070: Group50764
+    400072: Group52640
+    400074: Group54043
+    400076: Group57810
+    400078: Group59124
+    400080: Group61178
+    400082: Group61180
+    400084: Group61182
+    400086: Group62192
+    400088: Group62203
+    400090: Group62218
+    400092: Group63431
+    400094: Group64862
+    400096: Group7077
+    400098: Group9359
+    400100: //RootNode
+    2300000: Group10141
+    2300002: Group12814
+    2300004: Group12816
+    2300006: Group12818
+    2300008: Group13828
+    2300010: Group13837
+    2300012: Group13852
+    2300014: Group14475
+    2300016: Group2037
+    2300018: Group2039
+    2300020: Group2041
+    2300022: Group20952
+    2300024: Group25268
+    2300026: Group26685
+    2300028: Group3051
+    2300030: Group3060
+    2300032: Group3075
+    2300034: Group31759
+    2300036: Group33802
+    2300038: Group33804
+    2300040: Group33806
+    2300042: Group34172
+    2300044: Group34816
+    2300046: Group34827
+    2300048: Group34842
+    2300050: Group37502
+    2300052: Group40194
+    2300054: Group40196
+    2300056: Group40198
+    2300058: Group40561
+    2300060: Group41208
+    2300062: Group41219
+    2300064: Group41234
+    2300066: Group41845
+    2300068: Group48315
+    2300070: Group50764
+    2300072: Group52640
+    2300074: Group54043
+    2300076: Group57810
+    2300078: Group59124
+    2300080: Group61178
+    2300082: Group61180
+    2300084: Group61182
+    2300086: Group62192
+    2300088: Group62203
+    2300090: Group62218
+    2300092: Group63431
+    2300094: Group64862
+    2300096: Group7077
+    2300098: Group9359
+    3300000: Group10141
+    3300002: Group12814
+    3300004: Group12816
+    3300006: Group12818
+    3300008: Group13828
+    3300010: Group13837
+    3300012: Group13852
+    3300014: Group14475
+    3300016: Group2037
+    3300018: Group2039
+    3300020: Group2041
+    3300022: Group20952
+    3300024: Group25268
+    3300026: Group26685
+    3300028: Group3051
+    3300030: Group3060
+    3300032: Group3075
+    3300034: Group31759
+    3300036: Group33802
+    3300038: Group33804
+    3300040: Group33806
+    3300042: Group34172
+    3300044: Group34816
+    3300046: Group34827
+    3300048: Group34842
+    3300050: Group37502
+    3300052: Group40194
+    3300054: Group40196
+    3300056: Group40198
+    3300058: Group40561
+    3300060: Group41208
+    3300062: Group41219
+    3300064: Group41234
+    3300066: Group41845
+    3300068: Group48315
+    3300070: Group50764
+    3300072: Group52640
+    3300074: Group54043
+    3300076: Group57810
+    3300078: Group59124
+    3300080: Group61178
+    3300082: Group61180
+    3300084: Group61182
+    3300086: Group62192
+    3300088: Group62203
+    3300090: Group62218
+    3300092: Group63431
+    3300094: Group64862
+    3300096: Group7077
+    3300098: Group9359
+    4300000: Group10141
+    4300002: Group12814
+    4300004: Group12816
+    4300006: Group12818
+    4300008: Group13828
+    4300010: Group13837
+    4300012: Group13852
+    4300014: Group14475
+    4300016: Group2037
+    4300018: Group2039
+    4300020: Group2041
+    4300022: Group20952
+    4300024: Group25268
+    4300026: Group26685
+    4300028: Group3051
+    4300030: Group3060
+    4300032: Group3075
+    4300034: Group31759
+    4300036: Group33802
+    4300038: Group33804
+    4300040: Group33806
+    4300042: Group34172
+    4300044: Group34816
+    4300046: Group34827
+    4300048: Group34842
+    4300050: Group37502
+    4300052: Group40194
+    4300054: Group40196
+    4300056: Group40198
+    4300058: Group40561
+    4300060: Group41208
+    4300062: Group41219
+    4300064: Group41234
+    4300066: Group41845
+    4300068: Group48315
+    4300070: Group50764
+    4300072: Group52640
+    4300074: Group54043
+    4300076: Group57810
+    4300078: Group59124
+    4300080: Group61178
+    4300082: Group61180
+    4300084: Group61182
+    4300086: Group62192
+    4300088: Group62203
+    4300090: Group62218
+    4300092: Group63431
+    4300094: Group64862
+    4300096: Group7077
+    4300098: Group9359
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group10141Mat
+    second: {fileID: 2100000, guid: 68f0faccadda5824aa9ad9a9c86833c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group12814Mat
+    second: {fileID: 2100000, guid: 72d91d160974d4e47b038588d4d4acf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group12816Mat
+    second: {fileID: 2100000, guid: ca898768a95bd7741b99b46d655f93c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group12818Mat
+    second: {fileID: 2100000, guid: d8e6840c4d293ba49829dd685311a929, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group13828Mat
+    second: {fileID: 2100000, guid: 54ae023ae631079428b78db765e9e33c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group13837Mat
+    second: {fileID: 2100000, guid: 74883f7a9c0a59447a19dd18fa6db75a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group13852Mat
+    second: {fileID: 2100000, guid: 392e1a0a2f2c9b842bf624027c24cb01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group14475Mat
+    second: {fileID: 2100000, guid: f1921561d02ed334f82087592e678b97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group2037Mat
+    second: {fileID: 2100000, guid: 8eb40bf566ee3514e8d8612722d82353, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group2039Mat
+    second: {fileID: 2100000, guid: 70d2901836870c44e951e283690ca27a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group2041Mat
+    second: {fileID: 2100000, guid: 54bda39fda22dbd47a2ecbe9121b65aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group20952Mat
+    second: {fileID: 2100000, guid: 54c8d5bd057f4644592620167c41d961, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group25268Mat
+    second: {fileID: 2100000, guid: e081a75f05ad8f14e93a54616c94b18a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group26685Mat
+    second: {fileID: 2100000, guid: a3704932acefa5042946a9c9bebcd8f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group3051Mat
+    second: {fileID: 2100000, guid: 9b7c39bf3c574de4fbb18aa5d6067e66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group3060Mat
+    second: {fileID: 2100000, guid: eec1876d4df17084c888444f53ec4a5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group3075Mat
+    second: {fileID: 2100000, guid: a9b619a828f67754888b624103b0c396, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group31759Mat
+    second: {fileID: 2100000, guid: c159127f17415554e8e910c0c50ff5c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group33802Mat
+    second: {fileID: 2100000, guid: e0c3b8ea3b9059b4aa5229fb1d30479a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group33804Mat
+    second: {fileID: 2100000, guid: 9f5ed0fdb2d07664f8a2a580a4165b48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group33806Mat
+    second: {fileID: 2100000, guid: 2b000bd237da28744b39cb5b18e4f0ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group34172Mat
+    second: {fileID: 2100000, guid: 64564337164a72a48beb8839f4946ae3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group34816Mat
+    second: {fileID: 2100000, guid: 8782463cbe4841040a300ff0272a88d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group34827Mat
+    second: {fileID: 2100000, guid: fa4f720a5ba387b46803d61d83a4010d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group34842Mat
+    second: {fileID: 2100000, guid: c0817f3dba73fb144858b040b87c8de3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group37502Mat
+    second: {fileID: 2100000, guid: 256e8405c66255b468c23269553da78f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group40194Mat
+    second: {fileID: 2100000, guid: e171df58126a79c4aabf71f9724c2f3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group40196Mat
+    second: {fileID: 2100000, guid: 3868910b7c0d18943bc2f90f6cd32482, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group40198Mat
+    second: {fileID: 2100000, guid: 93e5e086742ab4d44bc819e7af96bdc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group40561Mat
+    second: {fileID: 2100000, guid: 771ea9e0e54eb7a4e875e6399d04f1c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group41208Mat
+    second: {fileID: 2100000, guid: 00feea45c8e8e2a4f84fd8e26006b43a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group41219Mat
+    second: {fileID: 2100000, guid: a42e62cd62f2cc149b6c0a7313f2c53a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group41234Mat
+    second: {fileID: 2100000, guid: 581a17500c1d3804eb50194ec38334d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group41845Mat
+    second: {fileID: 2100000, guid: abc71655def94e74f8daf6fa8527b1e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group48315Mat
+    second: {fileID: 2100000, guid: 0bea59efc355a1942989acbb3c79f28a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group50764Mat
+    second: {fileID: 2100000, guid: 804d11a768ae94649bef5961b14bd7e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group52640Mat
+    second: {fileID: 2100000, guid: f2ddefe8526b15740a2815a68c598676, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group54043Mat
+    second: {fileID: 2100000, guid: 92dd0434b5fd4c44f87e3d14fe8b22b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group57810Mat
+    second: {fileID: 2100000, guid: 8f05cac0f632be242bf7be813c18751d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group59124Mat
+    second: {fileID: 2100000, guid: ba99d6b4b6454c34a82b9c287f2762eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group61178Mat
+    second: {fileID: 2100000, guid: 778424dc0ff5cbc459fd0570c8cef9b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group61180Mat
+    second: {fileID: 2100000, guid: efde81837e767b44da54bde1b6ddd812, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group61182Mat
+    second: {fileID: 2100000, guid: 46b4f589a5353d145af79e73223f0fb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group62192Mat
+    second: {fileID: 2100000, guid: 59dfde1703ccb524aa6c11f58524bc9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group62203Mat
+    second: {fileID: 2100000, guid: ccbad4484ff5436408ba91dc157590e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group62218Mat
+    second: {fileID: 2100000, guid: 6a7336c9f42b20e41896176ffd582914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group63431Mat
+    second: {fileID: 2100000, guid: e4d727e9e8e271d41ba0733fc19e157a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group64862Mat
+    second: {fileID: 2100000, guid: 5280406524609a549bc2466484df33a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group7077Mat
+    second: {fileID: 2100000, guid: 05f9f810742afd34cb6a9a61291ec612, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group9359Mat
+    second: {fileID: 2100000, guid: 8a6e4e4dbb3838642ac54a3894b1e232, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 0802549153960e247a1a687e133866eb
+timeCreated: 1510548805
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: leaves
+    100002: //RootNode
+    100004: pCylinder1
+    100006: pCylinder10
+    100008: pCylinder11
+    100010: pCylinder2
+    100012: pCylinder3
+    100014: pCylinder4
+    100016: pCylinder5
+    100018: pCylinder6
+    100020: pCylinder7
+    100022: pCylinder8
+    100024: pCylinder9
+    100026: pPlane1
+    100028: pPlane10
+    100030: pPlane11
+    100032: pPlane2
+    100034: pPlane3
+    100036: pPlane4
+    100038: pPlane5
+    100040: pPlane6
+    100042: pPlane7
+    100044: pPlane8
+    100046: pPlane9
+    100048: PxrDiskLight1
+    100050: PxrDiskLight2
+    100052: PxrDiskLight3
+    100054: PxrDiskLight6
+    100056: PxrDiskLight7
+    100058: PxrDomeLight1
+    100060: PxrRectLight1
+    100062: trunk
+    400000: leaves
+    400002: //RootNode
+    400004: pCylinder1
+    400006: pCylinder10
+    400008: pCylinder11
+    400010: pCylinder2
+    400012: pCylinder3
+    400014: pCylinder4
+    400016: pCylinder5
+    400018: pCylinder6
+    400020: pCylinder7
+    400022: pCylinder8
+    400024: pCylinder9
+    400026: pPlane1
+    400028: pPlane10
+    400030: pPlane11
+    400032: pPlane2
+    400034: pPlane3
+    400036: pPlane4
+    400038: pPlane5
+    400040: pPlane6
+    400042: pPlane7
+    400044: pPlane8
+    400046: pPlane9
+    400048: PxrDiskLight1
+    400050: PxrDiskLight2
+    400052: PxrDiskLight3
+    400054: PxrDiskLight6
+    400056: PxrDiskLight7
+    400058: PxrDomeLight1
+    400060: PxrRectLight1
+    400062: trunk
+    2300000: pCylinder1
+    2300002: pCylinder10
+    2300004: pCylinder11
+    2300006: pCylinder2
+    2300008: pCylinder3
+    2300010: pCylinder4
+    2300012: pCylinder5
+    2300014: pCylinder6
+    2300016: pCylinder7
+    2300018: pCylinder8
+    2300020: pCylinder9
+    2300022: pPlane1
+    2300024: pPlane10
+    2300026: pPlane11
+    2300028: pPlane2
+    2300030: pPlane3
+    2300032: pPlane4
+    2300034: pPlane5
+    2300036: pPlane6
+    2300038: pPlane7
+    2300040: pPlane8
+    2300042: pPlane9
+    3300000: pCylinder1
+    3300002: pCylinder10
+    3300004: pCylinder11
+    3300006: pCylinder2
+    3300008: pCylinder3
+    3300010: pCylinder4
+    3300012: pCylinder5
+    3300014: pCylinder6
+    3300016: pCylinder7
+    3300018: pCylinder8
+    3300020: pCylinder9
+    3300022: pPlane1
+    3300024: pPlane10
+    3300026: pPlane11
+    3300028: pPlane2
+    3300030: pPlane3
+    3300032: pPlane4
+    3300034: pPlane5
+    3300036: pPlane6
+    3300038: pPlane7
+    3300040: pPlane8
+    3300042: pPlane9
+    4300000: pCylinder1
+    4300002: pCylinder2
+    4300004: pCylinder3
+    4300006: pCylinder4
+    4300008: pCylinder5
+    4300010: pCylinder6
+    4300012: pCylinder7
+    4300014: pCylinder8
+    4300016: pCylinder9
+    4300018: pCylinder10
+    4300020: pCylinder11
+    4300022: pPlane2
+    4300024: pPlane3
+    4300026: pPlane4
+    4300028: pPlane5
+    4300030: pPlane6
+    4300032: pPlane7
+    4300034: pPlane8
+    4300036: pPlane9
+    4300038: pPlane10
+    4300040: pPlane1
+    4300042: pPlane11
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green_fabric1
+    second: {fileID: 2100000, guid: d57cc2558d0e96a4192e93f2dee1bbd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_brown_fabric
+    second: {fileID: 2100000, guid: 65d619998fcafaf4cb17a9bf35e67151, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: specular_white_phenolic
+    second: {fileID: 2100000, guid: 861aa39888086a54098e986a914ee4fd, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
