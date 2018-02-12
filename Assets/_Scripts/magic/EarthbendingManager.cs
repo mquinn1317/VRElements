@@ -20,8 +20,6 @@ public class EarthbendingManager : MonoBehaviour {
 	public GameObject spark;
 
 //	Player Transforms
-	public Transform Player;
-	private PlayerManager pm;
 	public Transform l_hand;
 	public Transform r_hand;
 
@@ -129,10 +127,9 @@ public class EarthbendingManager : MonoBehaviour {
 		splitting = false;
 		aligned = false;
 		final = false;
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
-		rightlastposition = r_hand.position-Player.position;
+		rightlastposition = r_hand.position - Player.Instance.transform.position;
 		rightlastdirection = r_hand.forward;
-		leftlastposition = l_hand.position - Player.position;
+		leftlastposition = l_hand.position - Player.Instance.transform.position;
 		leftlastdirection = l_hand.forward;
 		leftpointerline = new GameObject ();
 		leftpointerline.transform.position = l_hand.position;
@@ -265,23 +262,23 @@ public class EarthbendingManager : MonoBehaviour {
 		}
 
 //		Spike throwing
-		if (pm.mana > 15 && !manipulating && target && leftpointing && lind_prevFlex > .55 && Vector3.Angle (target.transform.position - l_hand.position, l_hand.position - Player.position - leftlastposition) < 25 && leftspikecount <= 0) {
+		if (Player.Instance.mana > 15 && !manipulating && target && leftpointing && lind_prevFlex > .55 && Vector3.Angle (target.transform.position - l_hand.position, l_hand.position - Player.Instance.transform.position - leftlastposition) < 25 && leftspikecount <= 0) {
 			//Vector3 spikeloc = l_hand.position + l_hand.forward * 2 - .2f * (target.transform.position - l_hand.position);
 			//GameObject newspike = Instantiate (spike, spikeloc, Quaternion.LookRotation (target.transform.position - l_hand.position, transform.up));
 			//newspike.GetComponent<spikebehavior> ().fire = true;
-			GameObject newspark = Instantiate (spark, Player.position, Quaternion.LookRotation(target.transform.position-Player.position, Player.up));
+			GameObject newspark = Instantiate (spark, Player.Instance.transform.position, Quaternion.LookRotation(target.transform.position - Player.Instance.transform.position, Player.Instance.transform.up));
 			//newspark.transform.rotation *= Quaternion.Euler (0, -90, 0);
 			leftspikecount = 17;
-			pm.mana -= 15;
+			Player.Instance.mana -= 15;
 			Destroy (newspark, .3f);
 		}
 
-		if (pm.mana > 15 && !manipulating && target && rightpointing && rind_prevFlex > .55 && Vector3.Angle (target.transform.position - r_hand.position, r_hand.position - Player.position - rightlastposition) < 25 && rightspikecount <= 0) {
+		if (Player.Instance.mana > 15 && !manipulating && target && rightpointing && rind_prevFlex > .55 && Vector3.Angle (target.transform.position - r_hand.position, r_hand.position - Player.Instance.transform.position - rightlastposition) < 25 && rightspikecount <= 0) {
 			Vector3 spikeloc = r_hand.position + r_hand.forward * 2 - .2f * (target.transform.position - r_hand.position);
 			GameObject newspike = Instantiate (spike, spikeloc, Quaternion.LookRotation (target.transform.position - r_hand.position, transform.up));
 			newspike.GetComponent<spikebehavior> ().fire = true;
 			rightspikecount = 17;
-			pm.mana -= 15;
+			Player.Instance.mana -= 15;
 		}
 
 		if (leftspikecount > 0) {
@@ -291,15 +288,15 @@ public class EarthbendingManager : MonoBehaviour {
 			rightspikecount -= 1;
 		}
 
-		if (target && pm.mana > 15 && !manipulating && !rightpointing && !leftpointing && lind_prevFlex > .55 && rind_prevFlex > .55 && rhandrelease && lhandrelease) {
+		if (target && Player.Instance.mana > 15 && !manipulating && !rightpointing && !leftpointing && lind_prevFlex > .55 && rind_prevFlex > .55 && rhandrelease && lhandrelease) {
 			lindexrelease = false;
 			rindexrelease = false;
 			if (!splitting) {
 				print ("splitting");
 				splitting = true;
 				splitcount = 0;
-			} else if (!final && Vector3.Angle (r_hand.position - Player.position - rightlastposition, r_hand.forward) > 30f && Vector3.Angle (r_hand.position - Player.position - rightlastposition, r_hand.forward) < 150f && Vector3.Angle (l_hand.position - Player.position - leftlastposition, l_hand.forward) > 30f && Vector3.Angle (l_hand.position - Player.position - leftlastposition, l_hand.forward) < 150f) {
-				splitcount += (r_hand.position - Player.position - rightlastposition).magnitude + (l_hand.position - Player.position - leftlastposition).magnitude;
+			} else if (!final && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, r_hand.forward) > 30f && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, r_hand.forward) < 150f && Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, l_hand.forward) > 30f && Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, l_hand.forward) < 150f) {
+				splitcount += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude + (l_hand.position - Player.Instance.transform.position - leftlastposition).magnitude;
 				colorshift.GetComponent<Image> ().color = new Color (1f, 0, splitcount * 2f);
 				print ("splitcount : " + splitcount);
 				if (splitcount > .5f && Vector3.Angle (r_hand.forward, l_hand.forward) > 160f) {
@@ -320,13 +317,13 @@ public class EarthbendingManager : MonoBehaviour {
 			}
 			if (final && (r_hand.position - l_hand.position).magnitude > .7f && (Vector3.Angle (r_hand.forward, target.transform.position - r_hand.position) < 45 || Vector3.Angle (l_hand.forward, target.transform.position - l_hand.position) < 45)) {
 				print ("shocking");
-				GameObject newsparks = Instantiate (spark, Player.position + Player.forward, Quaternion.LookRotation (target.transform.position - Player.position, Player.up));
+				GameObject newsparks = Instantiate (spark, Player.Instance.transform.position + Player.Instance.transform.forward, Quaternion.LookRotation (target.transform.position - Player.Instance.transform.position, Player.Instance.transform.up));
 				Destroy (newsparks, .6f);
 				final = false;
 				splitcount = 0;
 				aligned = false;
 				splitting = false;
-				pm.mana -= 15;
+				Player.Instance.mana -= 15;
 				colorshift.GetComponent<Image> ().color = new Color (1f, .8f, 0);
 			}
 
@@ -349,7 +346,7 @@ public class EarthbendingManager : MonoBehaviour {
 				selected.Add (newhedron);
 				newhedron.AddComponent<hedronbehavior> ();
 				newhedron.GetComponent<MeshRenderer> ().material = selectedmat;
-				newhedron.GetComponent<hedronbehavior> ().forward = Player.forward;
+				newhedron.GetComponent<hedronbehavior> ().forward = Player.Instance.transform.forward;
 			} else if (lefthit != null && lefthit.tag == "manipulatable") {
 				selecting = true;
 				ljoyrelease = false;
@@ -390,7 +387,7 @@ public class EarthbendingManager : MonoBehaviour {
 				selected.Add (newhedron);
 				newhedron.AddComponent<hedronbehavior> ();
 				newhedron.GetComponent<MeshRenderer> ().material = selectedmat;
-				newhedron.GetComponent<hedronbehavior> ().forward = Player.forward;
+				newhedron.GetComponent<hedronbehavior> ().forward = Player.Instance.transform.forward;
 			} else if (righthit != null && righthit.tag == "manipulatable"){
 				selecting = true;
 				rjoyrelease = false;
@@ -442,8 +439,8 @@ public class EarthbendingManager : MonoBehaviour {
 
 		if (manipulating && !throwing && rhand_prevFlex > .55 && lhand_prevFlex > .55 && lind_prevFlex < .35 && rind_prevFlex < .35) {
 			bent = true;
-			Vector3 leftmovedir = l_hand.position - Player.position;
-			Vector3 rightmovedir = r_hand.position - Player.position;
+			Vector3 leftmovedir = l_hand.position - Player.Instance.transform.position;
+			Vector3 rightmovedir = r_hand.position - Player.Instance.transform.position;
 			Vector3 avgdir = leftmovedir + rightmovedir;
 			Vector3 target_point = (l_hand.position + l_hand.forward * (avgdir.magnitude-.05f) * 8f + r_hand.position + r_hand.forward * (avgdir.magnitude-.05f) * 8f)/2f;
 			if (!maniplight) {
@@ -491,7 +488,7 @@ public class EarthbendingManager : MonoBehaviour {
 						o.AddComponent<Rigidbody> ();
 					}
 					o.GetComponent<Rigidbody> ().useGravity = false;
-					o.GetComponent<Rigidbody> ().AddForce ((l_hand.position - Player.position - leftlastposition + r_hand.position - Player.position - rightlastposition) * o.GetComponent<manipulatable> ().forcemult);
+					o.GetComponent<Rigidbody> ().AddForce ((l_hand.position - Player.Instance.transform.position - leftlastposition + r_hand.position - Player.Instance.transform.position - rightlastposition) * o.GetComponent<manipulatable> ().forcemult);
 				}
 				throwing = true;
 			}
@@ -531,7 +528,7 @@ public class EarthbendingManager : MonoBehaviour {
 		}
 //		Defensive hedron mechanics
 		if (hedrongroup != null) {
-			hedrongroup.transform.position = Player.position;
+			hedrongroup.transform.position = Player.Instance.transform.position;
 			foreach (GameObject hed in hedrons_two) {
 				if (hed == null) {
 					toremove.Add (hed);
@@ -572,17 +569,17 @@ public class EarthbendingManager : MonoBehaviour {
 		}
 
 		if (mode == 1 && hedrongroup != null && rhand_prevFlex > .55 && lhand_prevFlex > .55
-		    && Vector3.Angle (r_hand.position - Player.position - rightlastposition, rightlastdirection) > 30
-		    && Vector3.Angle (l_hand.position - Player.position - leftlastposition, leftlastdirection) > 30) {
+			&& Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, rightlastdirection) > 30
+			&& Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, leftlastdirection) > 30) {
 			rightswinging = true;
 			leftswinging = true;
-			rightswingdist += (r_hand.position - Player.position - rightlastposition).magnitude;
-			leftswingdist += (l_hand.position - Player.position - leftlastposition).magnitude;
+			rightswingdist += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude;
+			leftswingdist += (l_hand.position - Player.Instance.transform.position - leftlastposition).magnitude;
 			if (rightswingdist > .45f || leftswingdist > .45f) {
 				readytopull = true;
 			}
-			if (readytopull && Vector3.Angle (r_hand.position - Player.position - rightlastposition, rightlastdirection) > 150) {
-				pulldist += (r_hand.position - Player.position - rightlastposition).magnitude;
+			if (readytopull && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, rightlastdirection) > 150) {
+				pulldist += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude;
 				if (pulldist > .1f) {
 					spintrigger = true;
 					pulldist = 0;
@@ -605,9 +602,9 @@ public class EarthbendingManager : MonoBehaviour {
 
 
 //		Right hand punch
-		if (!manipulating && selecting && rhand_prevFlex > .55 && Vector3.Angle (r_hand.position-Player.position - rightlastposition, rightlastdirection) < 30) {
+		if (!manipulating && selecting && rhand_prevFlex > .55 && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, rightlastdirection) < 30) {
 			rightpunching = true;
-			punchdist += (r_hand.position-Player.position - rightlastposition).magnitude;
+			punchdist += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude;
 		} else {
 			rightpunching = false;
 			rightpunchcount = 0;
@@ -639,13 +636,13 @@ public class EarthbendingManager : MonoBehaviour {
 				}
 			}
 		}
-		rightlastposition = r_hand.position-Player.position;
+		rightlastposition = r_hand.position - Player.Instance.transform.position;
 		rightlastdirection = r_hand.forward;
 
 //		Left hand punch
-		if (!manipulating && selecting && lhand_prevFlex > .55 && Vector3.Angle (l_hand.position-Player.position - leftlastposition, leftlastdirection) < 30) {
+		if (!manipulating && selecting && lhand_prevFlex > .55 && Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, leftlastdirection) < 30) {
 			leftpunching = true;
-			leftpunchdist += (l_hand.position-Player.position - leftlastposition).magnitude;
+			leftpunchdist += (l_hand.position - Player.Instance.transform.position - leftlastposition).magnitude;
 		} else {
 			leftpunching = false;
 			leftpunchcount = 0;
@@ -677,7 +674,7 @@ public class EarthbendingManager : MonoBehaviour {
 				}
 			}
 		}
-		leftlastposition = l_hand.position-Player.position;
+		leftlastposition = l_hand.position - Player.Instance.transform.position;
 		leftlastdirection = l_hand.forward;
 
 	}

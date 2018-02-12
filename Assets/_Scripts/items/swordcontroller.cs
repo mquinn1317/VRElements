@@ -6,7 +6,6 @@ public class swordcontroller : MonoBehaviour {
 
 	public bool active, gripping, left;
 	public GameObject hand;
-	public PlayerManager pm;
 	public float equipcost;
 	public GameObject ps;
 
@@ -14,7 +13,6 @@ public class swordcontroller : MonoBehaviour {
 	void Start () {
 		active = false;
 		gripping = false;
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
 		equipcost = 0;
 	}
 	
@@ -33,8 +31,8 @@ public class swordcontroller : MonoBehaviour {
 		if (active) {
 			if (hand.GetComponent<OVRGrabber> ().left) {
 				if (OVRInput.Get (OVRInput.RawAxis1D.LHandTrigger) > .55) {
-					if (pm.stamina > equipcost*3 * Time.deltaTime) {
-						pm.stamina -= equipcost*3 * Time.deltaTime;
+					if (Player.Instance.stamina > equipcost*3 * Time.deltaTime) {
+						Player.Instance.stamina -= equipcost*3 * Time.deltaTime;
 						gripping = true;
 						ps.SetActive (true);
 					} else {
@@ -47,8 +45,8 @@ public class swordcontroller : MonoBehaviour {
 				}
 			} else {
 				if (OVRInput.Get (OVRInput.RawAxis1D.RHandTrigger) > .55) {
-					if (pm.stamina > equipcost*3 * Time.deltaTime) {
-						pm.stamina -= equipcost*3 * Time.deltaTime;
+					if (Player.Instance.stamina > equipcost*3 * Time.deltaTime) {
+						Player.Instance.stamina -= equipcost*3 * Time.deltaTime;
 						gripping = true;
 						ps.SetActive (true);
 					} else {

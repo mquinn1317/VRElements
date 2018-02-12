@@ -7,7 +7,6 @@ public class MenuController : MonoBehaviour {
 
 	public bool statsvisible;
 	public GameObject menu, equipmenu;
-	public PlayerManager pm;
 	public EquipmentManager em;
 
 	public bool menu_prevFlex;
@@ -38,7 +37,6 @@ public class MenuController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		activationcount = 0;
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager>();
 		statsvisible = false;
 		activated = false;
 		deactivated = true;
@@ -100,18 +98,18 @@ public class MenuController : MonoBehaviour {
 				attackimg.color = new Color (1, 1,1);
 				defenseimg.color = new Color (1, 1,1);
 			}
-			if (rind_prevFlex > .55 && rind_released && pm.sp > 0) {
+			if (rind_prevFlex > .55 && rind_released && Player.Instance.sp > 0) {
 				rind_released = false;
 				if (attackselect) {
-					pm.defense += 1;
-					pm.sp -= 1;
+					Player.Instance.defense += 1;
+					Player.Instance.sp -= 1;
 				} else if (defenseselect) {
-					pm.attack += 1;
-					pm.sp -= 1;
+					Player.Instance.attack += 1;
+					Player.Instance.sp -= 1;
 				} else if (speedselect) {
-					pm.speed += 1;
-					pm.manaregen += pm.speed / 20f;
-					pm.sp -= 1;
+					Player.Instance.speed += 1;
+					Player.Instance.manaregen += Player.Instance.speed / 20f;
+					Player.Instance.sp -= 1;
 				}
 			}
 

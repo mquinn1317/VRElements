@@ -12,13 +12,11 @@ public class EnemyController : MonoBehaviour {
 	public GameObject slider;
 	public bool selected;
 	public GameObject selector;
-	private PlayerManager pm;
 	public float damagedisplacement;
 
 	// Use this for initialization
 	void Start () {
 		damagedisplacement = .8f;
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
 		rb = GetComponent<Rigidbody> ();
 		health = 30;
@@ -46,8 +44,8 @@ public class EnemyController : MonoBehaviour {
 		}
 		slider.GetComponent<Slider> ().value = (float)health / (float)maxhealth;
 		if (health <= 0) {
-			pm.experience += 10*pm.scale;
-			pm.expslider.GetComponent<Slider> ().value = pm.experience / (pm.level * pm.scale);
+			Player.Instance.experience += 10 * Player.Instance.scale;
+			Player.Instance.expslider.GetComponent<Slider> ().value = Player.Instance.experience / (Player.Instance.level * Player.Instance.scale);
 			Destroy (gameObject);
 		}
 	}
@@ -62,8 +60,8 @@ public class EnemyController : MonoBehaviour {
 			rb.AddForce (to_add * 8);
 		}
 		if (coll.gameObject.tag == "manipulatable" && coll.gameObject.GetComponent<Rigidbody>() && coll.gameObject.GetComponent<Rigidbody>().velocity.magnitude > .5f) {
-			pm.experience += 10*pm.scale;
-			pm.expslider.GetComponent<Slider> ().value = pm.experience / (pm.level * pm.scale);
+			Player.Instance.experience += 10 * Player.Instance.scale;
+			Player.Instance.expslider.GetComponent<Slider> ().value = Player.Instance.experience / (Player.Instance.level * Player.Instance.scale);
 			Destroy (gameObject);
 		}
 	}

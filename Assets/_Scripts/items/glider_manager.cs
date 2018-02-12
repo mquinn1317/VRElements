@@ -5,7 +5,6 @@ using UnityEngine;
 public class glider_manager : MonoBehaviour {
 
 	public Transform l_hand, r_hand, player;
-	public PlayerManager pm;
 
 	public bool rhandrelease, rindrelease, lhandrelease, lindrelease;
 	public float rhand_prevFlex, rind_prevFlex, lhand_prevFlex, lind_prevFlex;
@@ -16,7 +15,6 @@ public class glider_manager : MonoBehaviour {
 		lhandrelease = true;
 		rindrelease = true;
 		lindrelease = true;
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		l_hand = GameObject.FindGameObjectWithTag ("lhandgrabber").transform;
 		r_hand = GameObject.FindGameObjectWithTag ("rhandgrabber").transform;

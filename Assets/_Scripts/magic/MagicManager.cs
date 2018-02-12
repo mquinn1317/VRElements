@@ -22,8 +22,6 @@ public class MagicManager : MonoBehaviour {
 	public GameObject flames;
 
 	//	Player Transforms
-	public Transform Player;
-	public PlayerManager pm;
 	public Transform l_hand;
 	public Transform r_hand;
 
@@ -151,11 +149,10 @@ public class MagicManager : MonoBehaviour {
 		splitting = false;
 		aligned = false;
 		final = false;
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
 		sc = GameObject.FindGameObjectWithTag ("skillcallbacks").GetComponent<SkillCallbacks> ();
-		rightlastposition = r_hand.position-Player.position;
+		rightlastposition = r_hand.position - Player.Instance.transform.position;
 		rightlastdirection = r_hand.forward;
-		leftlastposition = l_hand.position - Player.position;
+		leftlastposition = l_hand.position - Player.Instance.transform.position;
 		leftlastdirection = l_hand.forward;
 		leftpointerline = new GameObject ();
 		leftpointerline.transform.position = l_hand.position;
@@ -203,7 +200,7 @@ public class MagicManager : MonoBehaviour {
 		Physics.Raycast (r_hand.position, r_hand.forward, out rrc);
 
 		if (lind_prevFlex > .55f) {
-			pm.stamina -= Time.deltaTime * 22f * l2djoy_prevFlex.magnitude;
+			Player.Instance.stamina -= Time.deltaTime * 22f * l2djoy_prevFlex.magnitude;
 		}
 		if (ybuttonrelease && ybutton_prevFlex) {
 			ybuttonrelease = false;
@@ -321,13 +318,13 @@ public class MagicManager : MonoBehaviour {
 		}
 
 		//		Spike throwing
-		if (pm.mana > 15 && !manipulating && target && leftpointing && lind_prevFlex > .55 && Vector3.Angle (target.transform.position - l_hand.position, l_hand.position - Player.position - leftlastposition) < 25 && leftspikecount <= 0) {
+		if (Player.Instance.mana > 15 && !manipulating && target && leftpointing && lind_prevFlex > .55 && Vector3.Angle (target.transform.position - l_hand.position, l_hand.position - Player.Instance.transform.position - leftlastposition) < 25 && leftspikecount <= 0) {
 			if (leftswing == 0) {
 				sc.SpikeThrow (true);
 			}
 		}
 
-		if (pm.mana > 15 && !manipulating && target && rightpointing && rind_prevFlex > .55 && Vector3.Angle (target.transform.position - r_hand.position, r_hand.position - Player.position - rightlastposition) < 25 && rightspikecount <= 0) {
+		if (Player.Instance.mana > 15 && !manipulating && target && rightpointing && rind_prevFlex > .55 && Vector3.Angle (target.transform.position - r_hand.position, r_hand.position - Player.Instance.transform.position - rightlastposition) < 25 && rightspikecount <= 0) {
 			if (rightswing == 0) {
 				sc.SpikeThrow (false);
 			}
@@ -348,14 +345,14 @@ public class MagicManager : MonoBehaviour {
 			rightspikecount -= 1;
 		}
 
-		if (target && pm.mana > 15 && !manipulating && !rightpointing && !leftpointing && lind_prevFlex > .55 && rind_prevFlex > .55 && rhandrelease && lhandrelease) {
+		if (target && Player.Instance.mana > 15 && !manipulating && !rightpointing && !leftpointing && lind_prevFlex > .55 && rind_prevFlex > .55 && rhandrelease && lhandrelease) {
 			lindexrelease = false;
 			rindexrelease = false;
 			if (!splitting) {
 				splitting = true;
 				splitcount = 0;
-			} else if (!final && Vector3.Angle (r_hand.position - Player.position - rightlastposition, r_hand.forward) > 30f && Vector3.Angle (r_hand.position - Player.position - rightlastposition, r_hand.forward) < 150f && Vector3.Angle (l_hand.position - Player.position - leftlastposition, l_hand.forward) > 30f && Vector3.Angle (l_hand.position - Player.position - leftlastposition, l_hand.forward) < 150f) {
-				splitcount += (r_hand.position - Player.position - rightlastposition).magnitude + (l_hand.position - Player.position - leftlastposition).magnitude;
+			} else if (!final && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, r_hand.forward) > 30f && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, r_hand.forward) < 150f && Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, l_hand.forward) > 30f && Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, l_hand.forward) < 150f) {
+				splitcount += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude + (l_hand.position - Player.Instance.transform.position - leftlastposition).magnitude;
 				colorshift.GetComponent<Image> ().color = new Color (1f, 0, splitcount * 2f);
 				if (splitcount > .5f && Vector3.Angle (r_hand.forward, l_hand.forward) > 160f) {
 					aligned = true;
@@ -381,7 +378,7 @@ public class MagicManager : MonoBehaviour {
 				splitcount = 0;
 				aligned = false;
 				splitting = false;
-				pm.mana -= 15;
+				Player.Instance.mana -= 15;
 				colorshift.GetComponent<Image> ().color = new Color (1f, .8f, 0);
 			}
 
@@ -435,17 +432,17 @@ public class MagicManager : MonoBehaviour {
 		}
 
 		if (mode == 1 && rhand_prevFlex > .55 && lhand_prevFlex > .55
-			&& Vector3.Angle (r_hand.position - Player.position - rightlastposition, rightlastdirection) > 30
-			&& Vector3.Angle (l_hand.position - Player.position - leftlastposition, leftlastdirection) > 30) {
+			&& Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, rightlastdirection) > 30
+			&& Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, leftlastdirection) > 30) {
 			rightswinging = true;
 			leftswinging = true;
-			rightswingdist += (r_hand.position - Player.position - rightlastposition).magnitude;
-			leftswingdist += (l_hand.position - Player.position - leftlastposition).magnitude;
+			rightswingdist += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude;
+			leftswingdist += (l_hand.position - Player.Instance.transform.position - leftlastposition).magnitude;
 			if (rightswingdist > .45f || leftswingdist > .45f) {
 				readytopull = true;
 			}
-			if (readytopull && Vector3.Angle (r_hand.position - Player.position - rightlastposition, rightlastdirection) > 150) {
-				pulldist += (r_hand.position - Player.position - rightlastposition).magnitude;
+			if (readytopull && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, rightlastdirection) > 150) {
+				pulldist += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude;
 				if (pulldist > .1f) {
 					spintrigger = true;
 					pulldist = 0;
@@ -468,9 +465,9 @@ public class MagicManager : MonoBehaviour {
 
 
 		//		Right hand punch
-		if (!manipulating && selecting && rhand_prevFlex > .55 && Vector3.Angle (r_hand.position-Player.position - rightlastposition, rightlastdirection) < 30) {
+		if (!manipulating && selecting && rhand_prevFlex > .55 && Vector3.Angle (r_hand.position - Player.Instance.transform.position - rightlastposition, rightlastdirection) < 30) {
 			rightpunching = true;
-			punchdist += (r_hand.position-Player.position - rightlastposition).magnitude;
+			punchdist += (r_hand.position - Player.Instance.transform.position - rightlastposition).magnitude;
 		} else {
 			rightpunching = false;
 			rightpunchcount = 0;
@@ -501,13 +498,13 @@ public class MagicManager : MonoBehaviour {
 				}
 			}
 		}
-		rightlastposition = r_hand.position-Player.position;
+		rightlastposition = r_hand.position - Player.Instance.transform.position;
 		rightlastdirection = r_hand.forward;
 
 		//		Left hand punch
-		if (!manipulating && selecting && lhand_prevFlex > .55 && Vector3.Angle (l_hand.position-Player.position - leftlastposition, leftlastdirection) < 30) {
+		if (!manipulating && selecting && lhand_prevFlex > .55 && Vector3.Angle (l_hand.position - Player.Instance.transform.position - leftlastposition, leftlastdirection) < 30) {
 			leftpunching = true;
-			leftpunchdist += (l_hand.position-Player.position - leftlastposition).magnitude;
+			leftpunchdist += (l_hand.position - Player.Instance.transform.position - leftlastposition).magnitude;
 		} else {
 			leftpunching = false;
 			leftpunchcount = 0;
@@ -538,7 +535,7 @@ public class MagicManager : MonoBehaviour {
 				}
 			}
 		}
-		leftlastposition = l_hand.position-Player.position;
+		leftlastposition = l_hand.position - Player.Instance.transform.position;
 		leftlastdirection = l_hand.forward;
 
 	}

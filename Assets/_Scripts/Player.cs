@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerManager : MonoBehaviour {
-
-	public GameObject Player;
+public class Player : MonoBehaviour {
+	public static Player Instance;
 	public MenuController menu;
 	public float maxhealth, health, experience;
 	public float mana, manaregen, maxmana;
@@ -19,6 +18,10 @@ public class PlayerManager : MonoBehaviour {
 
 	public bool abutton_prevFlex;
 	public bool areleased;
+
+	public void Awake () {
+		Instance = this;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -50,8 +53,8 @@ public class PlayerManager : MonoBehaviour {
 		}
 		if (abutton_prevFlex && areleased) {
 			areleased = false;
-			Player.GetComponent<OVRPlayerController> ().Jump ();
-			GameObject jumpaudio = Instantiate (jumpaudioprefab, Player.transform.position, Player.transform.rotation);
+			Player.Instance.GetComponent<OVRPlayerController> ().Jump ();
+			GameObject jumpaudio = Instantiate (jumpaudioprefab, Player.Instance.transform.position, Player.Instance.transform.rotation);
 			Destroy (jumpaudio, 1f);
 			jumpaudio.GetComponent<AudioSource> ().pitch += Random.Range (0, .5f);
 		}

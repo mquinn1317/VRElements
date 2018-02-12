@@ -26,7 +26,6 @@ public class BowBehavior : MonoBehaviour {
 	public float rhand_prevFlex, rind_prevFlex,separation_dist;
 	public Vector3 separationvector;
 	public MagicManager em;
-	public PlayerManager pm;
 
 	// Use this for initialization
 	void Start () {
@@ -35,7 +34,6 @@ public class BowBehavior : MonoBehaviour {
 			bclip.WriteSample(255);
 		}
 		em = GameObject.FindGameObjectWithTag ("magicmanager").GetComponent<MagicManager> ();
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		l_hand = GameObject.FindGameObjectWithTag ("lhandgrabber").transform;
 		r_hand = GameObject.FindGameObjectWithTag ("rhandgrabber").transform;
@@ -75,7 +73,7 @@ public class BowBehavior : MonoBehaviour {
 		}
 		separationvector = l_hand.position - r_hand.position;
 		separation_dist = separationvector.magnitude;
-		if (separation_dist < .4 && rind_prevFlex > .55 && rhand_prevFlex > .55 && rhandrelease && rindrelease && pm.stamina > 5f) {
+		if (separation_dist < .4 && rind_prevFlex > .55 && rhand_prevFlex > .55 && rhandrelease && rindrelease && Player.Instance.stamina > 5f) {
 			pulling = true;
 			rindrelease = false;
 			rhandrelease = false;
@@ -85,7 +83,7 @@ public class BowBehavior : MonoBehaviour {
 			arrow.GetComponent<ArrowBehavior> ().bow = gameObject;
 		}
 		if (pulling) {
-			pm.stamina -= Time.deltaTime * 12f;
+			Player.Instance.stamina -= Time.deltaTime * 12f;
 			thbs.enabled = true;
 			bhbs.enabled = true;
 			thbs.SetPosition (0, r_hand.position);
@@ -101,7 +99,7 @@ public class BowBehavior : MonoBehaviour {
 			if ((l_hand.position - r_hand.position).magnitude <= .6) {
 				taut = false;
 			}
-			if ((rindrelease || rhandrelease || pm.stamina < 1f)){
+			if ((rindrelease || rhandrelease || Player.Instance.stamina < 1f)){
 				pulling = false;
 				if ((l_hand.position - r_hand.position).magnitude > .6) {
 					arrow.GetComponent<ArrowBehavior> ().fire = true;

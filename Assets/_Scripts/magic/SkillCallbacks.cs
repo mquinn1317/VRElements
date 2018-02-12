@@ -6,12 +6,10 @@ using cakeslice;
 public class SkillCallbacks : MonoBehaviour {
 
 	public MagicManager mm;
-	public PlayerManager pm;
 
 	// Use this for initialization
 	void Start () {
 		mm = GameObject.FindGameObjectWithTag ("magicmanager").GetComponent<MagicManager>();
-		pm = GameObject.FindGameObjectWithTag ("playermanager").GetComponent<PlayerManager> ();
 	}
 	
 	// Update is called once per frame
@@ -24,12 +22,10 @@ public class SkillCallbacks : MonoBehaviour {
 		if (left) {
 			point = mm.lrcpoint;
 		}
-		Vector3 force = (point - mm.pm.Player.transform.position).normalized;
+		Vector3 force = (point - Player.Instance.transform.position).normalized;
 		force.y *= 6f;
 		print ("uhhhh your force is " + force);
-		PlayerManager pmsc = mm.pm;
-		GameObject player = pmsc.Player;
-		Rigidbody rb = player.GetComponent<Rigidbody>();
+		Rigidbody rb = Player.Instance.GetComponent<Rigidbody>();
 		rb.AddForce (force/3f);
 	}
 
@@ -42,16 +38,16 @@ public class SkillCallbacks : MonoBehaviour {
 		GameObject newspike = Instantiate (mm.spike, spikeloc, Quaternion.LookRotation (mm.target.transform.position - hand.position, transform.up));
 		newspike.GetComponent<spikebehavior> ().fire = true;
 		mm.rightspikecount = 17;
-		mm.pm.mana -= 15;
+		Player.Instance.mana -= 15;
 	}
 
 	public void LightningBolt(){
-		GameObject newsparks = Instantiate (mm.spark, mm.Player.position + mm.Player.forward, Quaternion.LookRotation (mm.target.transform.position - mm.Player.position, mm.Player.up));
+		GameObject newsparks = Instantiate (mm.spark, Player.Instance.transform.position + Player.Instance.transform.forward, Quaternion.LookRotation (mm.target.transform.position - Player.Instance.transform.position, Player.Instance.transform.up));
 		Destroy (newsparks, .6f);
 	}
 
 	public void FlameBlast(){
-		GameObject newsparks = Instantiate (mm.flames, mm.Player.position + mm.Player.forward*3f, Quaternion.LookRotation (mm.target.transform.position - mm.Player.position, mm.Player.up));
+		GameObject newsparks = Instantiate (mm.flames, Player.Instance.transform.position + Player.Instance.transform.forward * 3f, Quaternion.LookRotation (mm.target.transform.position - Player.Instance.transform.position, Player.Instance.transform.up));
 		Destroy (newsparks, 1.8f);
 	}
 
@@ -99,12 +95,12 @@ public class SkillCallbacks : MonoBehaviour {
 
 	public void EarthManip(){
 		mm.bent = true;
-		if (pm.mana < 1f) {
+		if (Player.Instance.mana < 1f) {
 			EarthRelease ();
 		}
-		pm.mana -= Time.deltaTime * 8f;
-		Vector3 leftmovedir = mm.l_hand.position - mm.Player.position;
-		Vector3 rightmovedir = mm.r_hand.position - mm.Player.position;
+		Player.Instance.mana -= Time.deltaTime * 8f;
+		Vector3 leftmovedir = mm.l_hand.position - Player.Instance.transform.position;
+		Vector3 rightmovedir = mm.r_hand.position - Player.Instance.transform.position;
 		Vector3 avgdir = leftmovedir + rightmovedir;
 		Vector3 target_point = (mm.l_hand.position + mm.l_hand.forward * (avgdir.magnitude-.05f) * 8f + mm.r_hand.position + mm.r_hand.forward * (avgdir.magnitude-.05f) * 8f)/2f;
 		if (!mm.maniplight) {
