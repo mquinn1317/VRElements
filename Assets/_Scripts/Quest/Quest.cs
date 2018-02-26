@@ -7,9 +7,7 @@ public class Quest : MonoBehaviour {
 	public int ID;
 	public string Description;
 
-	public void Complete (int id) {
-		Quest quest = QuestManager.activeQuests[id];
-		QuestManager.activeQuests.Remove(id);
-		QuestManager.finishedQuests.Add(id);
+	public void Complete () {
+		QuestManager.CompleteQuest(this);
 	}
 }

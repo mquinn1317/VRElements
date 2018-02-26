@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 using System.IO;  
 
@@ -9,7 +8,7 @@ public class QuestManager : MonoBehaviour {
 
 	private string questSystemDataProjectFilePath = "/Streaming Assets/QuestSystem.json";
 
-	public Dictionary<int, Quest> activeQuests;
+	public List<Quest> activeQuests;
 	public List<int> finishedQuests;
 
 	private const int QuestCount = 1000;
@@ -17,7 +16,8 @@ public class QuestManager : MonoBehaviour {
 	private void Awake () {
 		Quest.QuestManager = this;
 
-		activeQuests = new Dictionary<int, Quest>();
+		activeQuests = new List<Quest>();
+		finishedQuests = new List<int>();
 	}
 
 	private void Start () {
@@ -40,7 +40,7 @@ public class QuestManager : MonoBehaviour {
             	if (qd.Active) {
 					Quest questPrefab = (Resources.Load("Quests/" + qd.Name) as GameObject).GetComponent<Quest>();
 					//Quest quest = GameObject.Instantiate(questPrefab, this.transform);
-					activeQuests.Add(questPrefab.ID, questPrefab);
+					activeQuests.Add(questPrefab);
             	} else if (qd.Completed) {
 					Quest questPrefab = (Resources.Load("Quests/" + qd.Name) as GameObject).GetComponent<Quest>();
 					finishedQuests.Add(questPrefab.ID);
@@ -53,41 +53,32 @@ public class QuestManager : MonoBehaviour {
     /// Saves the quest system data.
     /// </summary>
     private void SaveQuestSystemData () {
-		string questSystemDataFilePath = Application.dataPath + questSystemDataProjectFilePath;
-
-		//Load data
-		QuestSystemData questSystemData;
-		string dataAsJson;
-		if (File.Exists (questSystemDataFilePath)) {
-			dataAsJson = File.ReadAllText (questSystemDataFilePath);
-			questSystemData = JsonUtility.FromJson<QuestSystemData> (dataAsJson);
-		} else {
-			questSystemData = new QuestSystemData(QuestCount);
-		}
+		//Create data object
+		QuestSystemData questSystemData = new QuestSystemData(QuestCount);
 
 		//Set data
-        foreach (Quest q in activeQuests.Values) {
+        foreach (Quest q in activeQuests) {
         	QuestData qd = questSystemData.QuestData[q.ID];
         	qd.Active = true;
         	qd.Name = gameObject.name;
         }
         foreach (int questID in finishedQuests) {
 			QuestData qd = questSystemData.QuestData[questID];
-        	qd.Active = false;
         	qd.Completed = true;
         }
 
         //Write data
-        dataAsJson = JsonUtility.ToJson (questSystemData);
+		string questSystemDataFilePath = Application.dataPath + questSystemDataProjectFilePath;
+        string dataAsJson = JsonUtility.ToJson (questSystemData);
 		File.WriteAllText(questSystemDataFilePath, dataAsJson);
     }
 
     public void ActivateQuest (Quest quest) {
-    	activeQuests.Add(quest.ID, quest);
+    	activeQuests.Add(quest);
     }
 
     public void CompleteQuest (Quest quest) {
-		activeQuests.Remove(quest.ID);
+		activeQuests.Remove(quest);
 		finishedQuests.Add(quest.ID);
     }
 }
