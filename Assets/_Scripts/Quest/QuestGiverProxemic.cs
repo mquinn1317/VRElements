@@ -3,24 +3,22 @@ using UnityEngine;
 
 public class QuestGiverProxemic : MonoBehaviour {
 
-	public string quest;
-	public float activationDistance;
-
-	private QuestManager qm;
-
-	void Awake () {
-		qm = GameObject.Find("QuestManager").GetComponent<QuestManager>();
-	}
+	public Quest Quest;
+	public float SquaredActivationDistance;
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(CheckPlayerDistance());
+		if (Quest.QuestManager.finishedQuests.Contains(Quest.ID)) {
+			GameObject.Destroy(this);
+		} else {
+			StartCoroutine(CheckPlayerDistance());
+		}
 	}
 
 	IEnumerator CheckPlayerDistance () {
 		while (true) {
-			if (Vector3.Distance(transform.position, qm.Player.transform.position) < activationDistance) {
-				qm.LoadQuest(quest);
+			if (Vector3.SqrMagnitude(transform.position - Player.Instance.transform.position) < SquaredActivationDistance) {
+				Quest.QuestManager.ActivateQuest(Quest);
 				StopCoroutine("CheckPlayerDistance");
 			}
 
